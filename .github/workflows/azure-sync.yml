@@ -17,9 +17,9 @@ jobs:
       env:
         AZURE_PAT: ${{ secrets.AZURE_PAT }}
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global user.email "LEADKRISHNA18@GMAIL.COM"
+        git config --global user.name "VENKATA SAI KRISHNA MARIYALA"
 
-        git remote add azure https://your_azure_username:${ADqV81B24jjBTEFSjWaE6RNWKRn4HubdvPtZthtrd4zmORktMzOwJQQJ99BFACAAAAAAAAAAAAASAZDO3lKt}@dev.azure.com/YOUR_ORG/YOUR_PROJECT/_git/YOUR_REPO
+        git remote add azure https://MVSK1156:${ADqV81B24jjBTEFSjWaE6RNWKRn4HubdvPtZthtrd4zmORktMzOwJQQJ99BFACAAAAAAAAAAAAASAZDO3lKt}@dev.azure.com/YOUR_ORG/YOUR_PROJECT/_git/YOUR_REPO
 
         git push azure HEAD:main --force
