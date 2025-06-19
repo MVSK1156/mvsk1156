@@ -3,7 +3,7 @@ name: Sync to Azure Repos
 on:
   push:
     branches:
-      - main  # or 'master' if you're using that
+      - main  # or 'master' if that's your branch
 
 jobs:
   sync:
@@ -20,6 +20,6 @@ jobs:
         git config --global user.email "LEADKRISHNA18@GMAIL.COM"
         git config --global user.name "VENKATA SAI KRISHNA MARIYALA"
 
-        git remote add azure https://LEADKRISHNA180216@dev.azure.com/LEADKRISHNA180216/MVSK1156/_git/MVSK1156
+        git remote add azure https://LEADKRISHNA180216:${AZURE_PAT}@dev.azure.com/LEADKRISHNA180216/MVSK1156/_git/MVSK1156
 
         git push azure HEAD:main --force
