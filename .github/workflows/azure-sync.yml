@@ -1,0 +1,25 @@
+name: Sync to Azure Repos
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if you're using that
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v3
+
+    - name: Push to Azure DevOps Repo
+      env:
+        AZURE_PAT: ${{ secrets.AZURE_PAT }}
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+
+        git remote add azure https://your_azure_username:${ADqV81B24jjBTEFSjWaE6RNWKRn4HubdvPtZthtrd4zmORktMzOwJQQJ99BFACAAAAAAAAAAAAASAZDO3lKt}@dev.azure.com/YOUR_ORG/YOUR_PROJECT/_git/YOUR_REPO
+
+        git push azure HEAD:main --force
