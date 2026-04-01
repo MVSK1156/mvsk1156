@@ -1,5 +1,4 @@
-## im a devops engineer with 20 lac package
-
+## im a devops engineer
 im happy that i have started something👋
 
 <!--
